@@ -25,7 +25,6 @@ public class TerrainMeshBuilder
                 float u0 = 0f, v0 = 0f;
                 float u1 = 1f, v1 = 1f;
 
-                // Triangle top left
                 vertices.AddRange(new Vector3[] {
                     new Vector3(x    , y0, z    ),
                     new Vector3(x    , y2, z + 1),
@@ -52,7 +51,6 @@ public class TerrainMeshBuilder
         mesh.SetUVs(0, uv);
         mesh.SetTriangles(triangles, 0);
         mesh.RecalculateNormals();
-        mesh.RecalculateTangents();
 
         return mesh;
     }
